@@ -1,0 +1,10 @@
+{
+  "name": "PHP Development Environment",
+  "image": "mcr.microsoft.com/vscode/devcontainers/php:latest",
+  "extensions": [
+    "felixfbecker.php-intellisense",
+    "bmewburn.vscode-intelephense-client"
+  ],
+  "forwardPorts": [80],
+  "postCreateCommand": "composer install"
+}
