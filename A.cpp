@@ -64,6 +64,22 @@ istream& operator>>(istream &istream, vector<T> &v){for (auto &it : v)cin >> it;
 void solve(){
    ll a,b,c,d,k=0,m,n,ans=0;
    string s,t; 
+   cin>>n;
+   vll v(n+2);
+
+   fr(i,1,n+1) cin>>v[i];
+   
+   vll AN(n+5,0);
+    AN[n+2]=10e15;
+    rfr(i,n,1){
+      ll x=i+v[i]+1;
+      if(x>n+1) {
+        x=n+2;
+      }
+      AN[i]=min(1+AN[i+1],AN[x]);
+    }
+    
+   cout<<AN[1]<<endl;
    
 }
  
